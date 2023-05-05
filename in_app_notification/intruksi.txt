@@ -1,0 +1,22 @@
+1. Buat model Notif
+    perintah : sequelize model:generate --name Notification --attributes title:string,body:string,user_id:integer,is_read:boolean
+    output: - example/migrations/20230505093040-create-notification.js
+            - example/models/user.js
+
+2. Lakukan Migarasi
+    perintah: sequelize db:generate
+
+3. Membuat Notifikasi
+    todo:
+        a. Buat fungsi create database
+            lokasi: example/utils/notif.js
+
+        b. Untuk membuat notif baru, bisa dengan cara memanggil fungsi createInAppNotification
+            contoh: example/main.js -> line: 17
+
+4. Membuat api get Notifikasi
+    contoh: example/main.js -> line: 29-49
+
+5. Membuat api update is_read notif
+    funsi: menandai bahwa notifikasi tersebut sudah dibaca
+    contoh: example/main.js -> line: 51-72
